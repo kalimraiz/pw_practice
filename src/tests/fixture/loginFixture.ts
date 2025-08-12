@@ -1,12 +1,16 @@
 import { test as base, expect, Page } from '@playwright/test';
 
-type LoginFixture = {
+type LoginFixture = 
+{
   login: () => Promise<Page>;
 };
 
-export const test = base.extend<LoginFixture>({
-  login: async ({ page }, use) => {
-    const doLogin = async () => {
+export const test = base.extend<LoginFixture>(
+{
+  login: async ({ page }, use) => 
+  {
+    const doLogin = async () => 
+    {
       console.log('Opening URL...');
       await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
