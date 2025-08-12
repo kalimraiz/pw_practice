@@ -1,6 +1,4 @@
 import { defineConfig, devices } from '@playwright/test';
-import path from 'path';
-
 
 /**
  * Read environment variables from file.
@@ -33,11 +31,6 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    
-      baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php',
-      storageState: path.join(__dirname, 'auth.json'), // load saved session
-      headless: false,
-      screenshot: 'only-on-failure'
   },
     
   /* Configure projects for major browsers */
